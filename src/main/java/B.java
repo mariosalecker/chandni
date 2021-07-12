@@ -1,16 +1,14 @@
 class B {
 
     public static B getStaticMethod() {
+        System.out.println("getStaticMethod");
         B bObj = new B();
-        if (true) {
-            throw new IllegalStateException();
-        }
         return bObj;
     }
 
 
     public Context getContext() {
-
+        System.out.println("getContext");
         Context context = new Context();
         return context;
     }

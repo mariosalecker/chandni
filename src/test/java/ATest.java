@@ -1,17 +1,13 @@
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import static org.mockito.Mockito.*;
 
 
-
-
 public class ATest {
-	
-	//@InjectMocks
-	//private A classAObj;
+
+    //@InjectMocks
+    //private A classAObj;
 
     @Test
     public void testProcessRequest() {
@@ -20,15 +16,13 @@ public class ATest {
         doReturn(new Token()).when(spy).getToken();
         spy.processRequest();
     }
-    
+
     @Test
     public void testProcessRequest_chandni() {
-    	A myAObject = new A();
-    	
-    	 A myInstance = new A();
-    	 A mySpy = Mockito.spy(myInstance);
-    	 Mockito.doReturn(new Token()).when(mySpy).getToken();
-    	 myAObject.processRequest();
-    	 
+        A myInstance = new A();
+        A mySpy = Mockito.spy(myInstance);
+        Mockito.doReturn(new Token()).when(mySpy).getToken();
+        mySpy.processRequest();
+        mySpy.someRealMethod();
     }
 }
